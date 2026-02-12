@@ -1,0 +1,229 @@
+.banner {
+    background: #f2f0f1;
+
+    &__wrap {
+        @include d-flex(center, space-between, 0, unset);
+        margin-top: 24px;
+
+        @include media(790) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        width: 50%;
+        height: 100%;
+        @include d-flex(flex-start, space-between, 32, column);
+        margin-top: 24px;
+        @include media(790) {
+            width: 100%;
+            margin-top: 50px;
+        }
+        @include media(500){
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        font-family: var(--secund-family);
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        color: #000;
+        max-width: 577px;
+
+        @include media(1092) {
+            font-size: 48px;
+        }
+
+        @include media(500) {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 94%;
+            color: #000;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 138%;
+        color: rgba(0, 0, 0, 0.6);
+        max-width: 545px;
+
+        @include media(500) {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &__button {
+        border-radius: 62px;
+        background-color: #000;
+        padding: 16px 54px;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        @include media(500){
+            width: 100%;
+        }
+    }
+
+    &__authers {
+        width: 100%;
+        @include d-flex(unset, unset, 64, unset);
+        z-index: 2;
+        @include media(500){
+            gap: 54px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    &__auther {
+        @include d-flex(unset, unset, 10, column);
+        position: relative;
+        @include media(500){
+            gap:6px;
+        }
+    }
+
+    &__auther:nth-child(1)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: #0000001d;
+        right: -32px;
+        @include media(500){
+            width: 2px;
+        }
+
+    }
+
+    &__auther:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: #0000001d;
+        right: -32px;
+        @include media(500){
+            display: none;
+        }
+
+    }
+
+    &-num {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 40px;
+        color: #000;
+
+        @include media(1092) {
+            font-size: 28px;
+        }
+        @include media(500){
+            font-size: 24px;
+        }
+    }
+
+    &__auther-subtitle {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 138%;
+        color: rgba(0, 0, 0, 0.6);
+
+        @include media(1092) {
+            font-size: 16px;
+        }
+        @include media(500){
+            font-size: 12px;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        height: 100%;
+        position: relative;
+    
+        @include media(1130) {
+            width: 40%;
+            height: 100%;
+        }
+
+        @include media(1092) {
+            width: 50%;
+        }
+
+        @include media(790) {
+            width: 70%;
+            margin-top: 30px;
+        }
+        @include media(500){
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__design {
+        position: absolute;
+        right: -30px;
+        top: 15%;
+        @include media(500){
+            display: none;
+        }
+    }
+
+    &__design-two {
+        position: absolute;
+        left: 4%;
+        top: 50%;
+    }
+    &__brends{
+        width: 100%;
+        background-color: #000;
+        @include d-flex(center,center,106,unset);
+        padding: 40px 100px;
+        svg{
+          @include media(660){
+            width: 120px;
+          }
+          @include media(500){
+            width: 116px;
+            height: 23px;
+          }
+          @include media(435){
+            width: 100px;
+          }
+        }
+        flex-wrap: wrap;
+        @include media(1285){
+            padding: 20px 80px;
+            gap: 80px;
+        }
+        @include media(1000){
+            padding: 20px 20px;
+            gap: 40px;
+        }
+        @include media(500){
+            padding: 25px 16px;
+            gap: 20px;
+        }
+    }
+}

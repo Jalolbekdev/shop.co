@@ -1,0 +1,310 @@
+.header {
+    &__wrap {
+        margin-top: 24px;
+        @include d-flex(center, space-between, 0, row);
+
+
+    }
+
+    &__contain {
+        @include d-flex(end, center, 16, unset);
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 32px;
+        color: #000;
+        font-family: var(--secund-family);
+    }
+
+    &__nav {
+        position: relative;
+        @include d-flex(center, unset, 24, unset);
+
+        &-popup {
+            position: absolute;
+            bottom: 0px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s ease-in-out;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                bottom: -50px;
+            }
+
+        }
+
+        @include media(983) {
+            gap: 12px;
+        }
+
+        @include media(790) {
+            display: none;
+        }
+
+        &-item {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            position: relative;
+            cursor: default;
+            overflow: hidden;
+
+            &.active {
+                overflow: unset;
+            }
+
+        }
+    }
+
+    &__buttons {
+        @include d-flex(center, unset, 16, unset);
+
+        @include media(790) {
+            gap: 13px;
+
+        }
+
+    }
+
+    &__shop {
+        cursor: pointer;
+    }
+
+    &__user {
+        cursor: pointer;
+    }
+
+    &__search {
+        @include d-flex(center, unset, 12, unset);
+        border-radius: 62px;
+        padding: 12px 16px;
+        background: #f0f0f0;
+        margin-right: 16px;
+        cursor: pointer;
+
+        @include media(983) {
+            padding: 12px;
+        }
+
+        @include media(790) {
+            display: none;
+
+        }
+
+        input {
+            width: 500px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(0, 0, 0);
+
+            @include media(1185) {
+                width: 300px;
+            }
+
+            @include media(945) {
+                width: 150px;
+                font-size: 12px;
+            }
+        }
+
+        &-res {
+            display: none;
+            cursor: pointer;
+
+            @include media(790) {
+                display: block;
+
+            }
+        }
+    }
+
+    &__menu-btn {
+        display: none;
+        cursor: pointer;
+
+        @include media(790) {
+            display: block;
+        }
+    }
+
+    &__menu {
+        @include d-flex(center, unset, 0, column);
+        position: absolute;
+        padding: 20px;
+        z-index: 3;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: all .3s ease-in-out;
+
+        &.active {
+            transform: translateX(0);
+        }
+
+        &-left-arrow {
+            cursor: pointer;
+        }
+
+        &-top {
+            width: 100%;
+            padding-bottom: 15px;
+            @include d-flex(center, space-between, 0, unset);
+            border-bottom: 1px solid #a4a4a47a;
+
+            &-title {
+                font-size: 22px;
+                font-family: var(--secund-family);
+                @include media(500){
+                    font-size: 20px;
+                }
+            }
+
+            &-btn {
+                cursor: pointer;
+            }
+        }
+
+        &__kategory {
+            width: 100%;
+            margin-top: 40px;
+            @include d-flex(center, unset, 12, column);
+
+            &-item {
+                @include d-flex(center, space-between, 0, unset);
+                width: 100%;
+                font-size: 18px;
+                font-weight: 600;
+                cursor: pointer;
+
+            }
+
+            &-item:last-child {
+                color: red;
+            }
+        }
+
+        &__main {
+            width: 100%;
+            margin-top: 200px;
+            @include d-flex(unset, unset, 12, column);
+
+            &-content {
+                @include d-flex(center, unset, 10, unset);
+                font-weight: 700;
+                font-size: 18px;
+
+                & .arrow {
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+        }
+
+        &-logo {
+            font-family: var(--secund-family);
+            font-weight: 700;
+            font-size: 28px;
+            color: #000;
+        }
+
+        &-footer {
+            @include d-flex(center, space-between, 0, unset);
+            width: 100%;
+            margin-top: 40px;
+
+            &-socials {
+                @include d-flex(center, center, 12, unset);
+            }
+
+            &-social {
+                border-radius: 100%;
+                width: 32px;
+                height: 32px;
+                @include d-flex(center, center, 0, unset);
+                cursor: pointer;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            &-social:nth-child(2) {
+                background-color: #000;
+            }
+
+        }
+
+        &-end {
+            width: 100%;
+            background-color: #000;
+            margin-top: 20px;
+            padding: 4px;
+
+            p {
+                color: white;
+                font-size: 12px;
+            }
+
+        }
+
+        &-mens-popup {
+            position: absolute;
+            top: 0%;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            padding: 20px 40px 0px 20px;
+            z-index: 2;
+            transition: all .3s ease-in-out;
+            transform: translateX(100%);
+            @include d-flex(unset,unset,10,column);
+
+            &-top {
+                width: 100%;
+                @include d-flex(center, space-between, 0, unset);
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #a4a4a47a;
+                &-btn{
+                    cursor: pointer;
+                }
+                &-arrow{
+                    cursor: pointer;
+                }
+                &-title {
+                    font-size: 22px;
+                    font-family: var(--secund-family);
+                    @include media(500){
+                        font-size: 20px;
+                    }
+                }
+            }
+            &-title{
+                @include d-flex(center, space-between, 0, unset);
+                font-size: 20px;
+                font-weight: 600;
+                padding: 4px 0;
+                border-bottom: 1px solid #a4a4a47a;
+            }
+            &-item {
+                @include d-flex(center, space-between, 0, unset);
+                font-size: 16px;
+                font-weight: 600;
+            }
+           
+           
+
+            &.active {
+                transform: translateX(0);
+                
+            }
+
+        }
+    }
+}
