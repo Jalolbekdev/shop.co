@@ -1,3 +1,4 @@
+@use "../generals/mixins" as *;
 .browse {
     margin-bottom: 80px;
     &__wrap {

@@ -1,12 +1,12 @@
 //GENERALS PAGES
 
-@import "./generals/variables";
-@import "./generals/normailize";
-@import "./generals/mixins";
+@use "./generals/variables" as *;
+@use "./generals/normailize" as *;
+@use "./generals/mixins" as *;
 
 //COMPONENTS PAGES
-@import "./components/header";
-@import "./components/banner";
-@import "./components/newarrivals";
-@import "./components/topselling";
-@import "./components/browse";
+@use "./components/header";
+@use "./components/banner";
+@use "./components/newarrivals";
+@use "./components/topselling";
+@use "./components/browse";

@@ -1,3 +1,4 @@
+@use "../generals/mixins" as *;
 .topselling {
     margin-top: 220px;
     &__wrap{
